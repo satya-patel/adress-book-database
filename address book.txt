@@ -123,3 +123,24 @@ mysql> SELECT * FROM AddressBook;
 |  2 | sanskar    | chitransh | Vaishali Nagar | New Delhi | Delhi       | 9958461968 |   7896541230 | xyz@gmail.com | Friend |
 |  3 | shrashti   | mittal    | Shastri Nagar  | aligarh   | Maharashtra |     412210 |   9958940169 | qwr@yahoo.com | NULL   |
 +----+------------+-----------+----------------+-----------+-------------+------------+--------------+---------------+--------+
+
+
+#uc7
+
+mysql> SELECT City,COUNT(City) FROM AddressBook GROUP BY City;
++-----------+-------------+
+| City      | COUNT(City) |
++-----------+-------------+
+| New Delhi |           2 |
+| aligarh   |           1 |
++-----------+-------------+
+
+
+mysql>  SELECT State,COUNT(State) FROM AddressBook GROUP BY State;
++-------------+--------------+
+| State       | COUNT(State) |
++-------------+--------------+
+| Delhi       |            2 |
+| Maharashtra |            1 |
++-------------+--------------+
+

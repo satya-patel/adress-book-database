@@ -90,3 +90,36 @@ mysql> SELECT * FROM AddressBook
 
 #uc6
 
+mysql> ALTER TABLE AddressBook
+    -> ADD type VARCHAR(15);
+Query OK, 0 rows affected (0.14 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM AddressBook;
++----+------------+-----------+----------------+-----------+-------------+------------+--------------+---------------+------+
+| Id | First_Name | Last_Name | Address        | City      | State       | Zip        | Phone_Number | Email         | type |
++----+------------+-----------+----------------+-----------+-------------+------------+--------------+---------------+------+
+|  1 | satya      | patel     | Karol Bagh     | New Delhi | Delhi       |     110005 |   9599141150 | abc@gmail.com | NULL |
+|  2 | sanskar    | chitransh | Vaishali Nagar | New Delhi | Delhi       | 9958461968 |   7896541230 | xyz@gmail.com | NULL |
+|  3 | shrashti   | mittal    | Shastri Nagar  | aligarh   | Maharashtra |     412210 |   9958940169 | qwr@yahoo.com | NULL |
++----+------------+-----------+----------------+-----------+-------------+------------+--------------+---------------+------+
+
+
+mysql> UPDATE AddressBook
+    -> SET type = 'Self'
+    -> WHERE First_Name = 'satya';
+ 
+
+mysql> UPDATE AddressBook
+    -> SET type = 'Friend'
+    ->  WHERE First_Name = 'sanskar' or Last_Name = 'chitransh';
+
+
+mysql> SELECT * FROM AddressBook;
++----+------------+-----------+----------------+-----------+-------------+------------+--------------+---------------+--------+
+| Id | First_Name | Last_Name | Address        | City      | State       | Zip        | Phone_Number | Email         | type   |
++----+------------+-----------+----------------+-----------+-------------+------------+--------------+---------------+--------+
+|  1 | satya      | patel     | Karol Bagh     | New Delhi | Delhi       |     110005 |   9599141150 | abc@gmail.com | Self   |
+|  2 | sanskar    | chitransh | Vaishali Nagar | New Delhi | Delhi       | 9958461968 |   7896541230 | xyz@gmail.com | Friend |
+|  3 | shrashti   | mittal    | Shastri Nagar  | aligarh   | Maharashtra |     412210 |   9958940169 | qwr@yahoo.com | NULL   |
++----+------------+-----------+----------------+-----------+-------------+------------+--------------+---------------+--------+

@@ -67,4 +67,15 @@ mysql> INSERT INTO AddressBook(First_Name,Last_Name,Address,City,State,Zip,Phone
     ->        ('sanskar','chitransh','Vaishali Nagar', 'New Delhi','Delhi',9958461968,7896541230,'xyz@gmail.com'),
     ->        ('shrashti','mittal','Shastri Nagar','aligarh','Maharashtra',412210,9958940169,'qwr@yahoo.com');
 
-   
+#uc4
+
+mysql> SELECT * FROM AddressBook;
++----+------------+-----------+----------------+-----------+-------------+------------+--------------+---------------+
+| Id | First_Name | Last_Name | Address        | City      | State       | Zip        | Phone_Number | Email         |
++----+------------+-----------+----------------+-----------+-------------+------------+--------------+---------------+
+|  1 | satya      | patel     | Karol Bagh     | New Delhi | Delhi       |     110005 |   9599141150 | abc@gmail.com |
+|  2 | sanskar    | chitransh | Vaishali Nagar | New Delhi | Delhi       | 9958461968 |   7896541230 | xyz@gmail.com |
+|  3 | shrashti   | mittal    | Shastri Nagar  | aligarh   | Maharashtra |     412210 |   9958940169 | qwr@yahoo.com |
++----+------------+-----------+----------------+-----------+-------------+------------+--------------+---------------+
+
+#uc5

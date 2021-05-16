@@ -1,0 +1,29 @@
+#UC1
+
+mysql>  CREATE DATABASE AddressBookService;
+
+
+mysql>  show databases;
++--------------------+
+| Database           |
++--------------------+
+| addressbookservice |
+| information_schema |
+| mysql              |
+| payroll            |
+| payroll_service    |
+| performance_schema |
+| pet                |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+
+mysql> USE AddressBookService;
+Database changed
+mysql>  select database();
++--------------------+
+| database()         |
++--------------------+
+| addressbookservice |
++--------------------+

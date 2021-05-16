@@ -60,3 +60,11 @@ mysql> DESCRIBE AddressBook;
 | Email        | varchar(150) | NO   |     | NULL    |                |
 +--------------+--------------+------+-----+---------+----------------+
 
+#uc3
+
+mysql> INSERT INTO AddressBook(First_Name,Last_Name,Address,City,State,Zip,Phone_Number,Email) VALUES
+    ->         ('satya','patel','Karol Bagh','New Delhi','Delhi',110005,9599141150,'abc@gmail.com'),
+    ->        ('sanskar','chitransh','Vaishali Nagar', 'New Delhi','Delhi',9958461968,7896541230,'xyz@gmail.com'),
+    ->        ('shrashti','mittal','Shastri Nagar','aligarh','Maharashtra',412210,9958940169,'qwr@yahoo.com');
+
+   
